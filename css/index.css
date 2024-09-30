@@ -2,6 +2,7 @@
   /* Color palette */
   --light:       #ffffff;
   --dark:        #1a1a1a;
+  --black:       #000000;
   --grey-lighter: ##CCCCCC;
   --grey-light:  #A7A7A7;
   --grey:        #666666;
@@ -10,10 +11,14 @@
   --green:       #018C0F;
   --blue:        #13B0F5;
   --pink:        #E70FAA;
+  --purple-dark: #42446E;
 
   /* Colors */
   --body-bg: var(--light);
   --body-text-color: var(--grey);
+  --link-text-color: var(--black);
+  --link-text-color-hover: var(--grey);
+  --heading-text-color: var(--purple-dark);
 }
 
 /* Base */
@@ -30,9 +35,33 @@ html, body {
 body {
   box-sizing: border-box;
   background: var(--body-bg);
-  color: var(--grey);
 }
 
 img {
   max-width: 100%;
+}
+
+/* Typography */
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--body-text-color);
+}
+
+p {
+  padding: 1rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 1em 0;
+  color: var(--heading-text-color);
+  line-height: 1;
+}
+
+a {
+  color: var(--link-text-color);
+}
+
+a:hover {
+  color: var(--link-text-color-hover);
+  text-decoration: none;
 }
