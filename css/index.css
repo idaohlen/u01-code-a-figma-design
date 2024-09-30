@@ -28,6 +28,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 html, body {
   height: 100%;
 }
@@ -35,6 +39,7 @@ html, body {
 body {
   box-sizing: border-box;
   background: var(--body-bg);
+  font-size: 1.6rem;
 }
 
 img {
