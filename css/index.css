@@ -1,3 +1,21 @@
+:root {
+  /* Color palette */
+  --light:       #ffffff;
+  --dark:        #1a1a1a;
+  --grey-lighter: ##CCCCCC;
+  --grey-light:  #A7A7A7;
+  --grey:        #666666;
+  --grey-dark:   #363636;
+  --green-light: #D7FFE0;
+  --green:       #018C0F;
+  --blue:        #13B0F5;
+  --pink:        #E70FAA;
+
+  /* Colors */
+  --body-bg: var(--light);
+  --body-text-color: var(--grey);
+}
+
 /* Base */
 *, *::before, *::after {
   box-sizing: inherit;
@@ -11,6 +29,8 @@ html, body {
 
 body {
   box-sizing: border-box;
+  background: var(--body-bg);
+  color: var(--grey);
 }
 
 img {
