@@ -44,7 +44,6 @@ a:hover {
 .header {
   padding: 1rem;
   text-align: center;
-  color: var(--header-text);
 }
 
 .header__nav {
@@ -255,6 +254,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
   border-radius: 15px;
   min-width: 300px;
   overflow: hidden;
+  background: var(--card-bg);
   box-shadow:
     0px 0px 100px var(--card-shadow),
     0px 0px 10px var(--card-shadow);
@@ -324,7 +324,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
 @media screen and (min-width: 810px) {
   :root {
     --page-max-width: 1000px;
-    --header-nav-link: var(--grey);
+    --header-nav-link: light-dark(var(--grey), var(--grey-light));
   }
 
   .page-content, .header__nav {
