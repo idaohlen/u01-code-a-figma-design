@@ -291,7 +291,4 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 /* Desktop: Wider than 600px */
 @media screen and (min-width: 600px) {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-text-desktop);
-  }
 }
