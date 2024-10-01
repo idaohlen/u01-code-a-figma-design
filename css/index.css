@@ -1,17 +1,18 @@
 :root {
   /* Color palette */
-  --light:       #ffffff;
-  --dark:        #1a1a1a;
-  --black:       #000000;
-  --grey-lighter: ##CCCCCC;
-  --grey-light:  #A7A7A7;
-  --grey:        #666666;
-  --grey-dark:   #363636;
-  --green-light: #D7FFE0;
-  --green:       #018C0F;
-  --blue:        #13B0F5;
-  --pink:        #E70FAA;
-  --purple-dark: #42446E;
+  --light:        #ffffff;
+  --dark:         #1a1a1a;
+  --black:        #000000;
+  --grey-light-3: #EBEAED;
+  --grey-light-2: #CCCCCC;
+  --grey-light:   #A7A7A7;
+  --grey:         #666666;
+  --grey-dark:    #363636;
+  --green-light:  #D7FFE0;
+  --green:        #018C0F;
+  --blue:         #13B0F5;
+  --pink:         #E70FAA;
+  --purple-dark:  #42446E;
 
   --gradient: linear-gradient(
     to right,
@@ -21,11 +22,17 @@
 
   /* Colors */
   --body-bg: var(--light);
-  --body-text-color: var(--grey);
-  --link-text-color: var(--black);
-  --link-text-color-hover: var(--grey);
-  --heading-text-color: var(--purple-dark);
-  --header-text-color: var(--black);
+  --body-color: var(--grey);
+  --link-color: var(--black);
+  --link-color-hover: var(--grey);
+  --heading-color: var(--black);
+  --heading-color-desktop: var(--purple-dark);
+  --heading-3-color: var(--body-color);
+  --header-color: var(--black);
+  --pill-text: var(--green);
+  --pill-bg: var(--green-light);
+  --jobs-list-item-border: var(--grey-light-3);
+  --jobs-list-detail-color: var(--grey-light);
 }
 
 /* Base */
@@ -56,27 +63,35 @@ img {
 /* Typography */
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--body-text-color);
+  color: var(--body-color);
   display: flex;
   flex-direction: column;
 }
 
 p {
-  padding: 1rem 0;
+  padding-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  padding: 1em 0;
-  color: var(--heading-text-color);
+  padding: 2.2rem 0;
+  color: var(--heading-color);
   line-height: 1;
 }
 
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
 a {
-  color: var(--link-text-color);
+  color: var(--link-color);
 }
 
 a:hover {
-  color: var(--link-text-color-hover);
+  color: var(--link-color-hover);
   text-decoration: none;
 }
 
@@ -85,7 +100,7 @@ a:hover {
 .header {
   padding: 1rem;
   text-align: center;
-  color: var(--header-text-color);
+  color: var(--header-color);
 }
 
 .header__nav {
@@ -196,10 +211,62 @@ https://css-tricks.com/gradient-borders-in-css/ */
   background: var(--gradient);
 }
 
+.jobs-list {
+  margin: 2rem 0;
+  list-style: none;
+}
+
+.jobs-list__item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 2px solid var(--jobs-list-item-border);
+}
+
+.jobs-list__title {
+  flex: 100%;
+  padding: 0;
+  font-weight: 500;
+  color: var(--heading-3-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.jobs-list__detail {
+  font-size: 1.3rem;
+  color: var(--jobs-list-detail-color);
+}
+
+.jobs-list__detail:last-child {
+  margin-left: auto;
+}
+
+.pill {
+  padding: .5rem 1rem;
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  font-size: .6em;
+  text-align: center;
+  border-radius: 100px;
+}
+
 /* Utilities */
 
 .gradient-text {
   background: var(--gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 600px) {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color-desktop);
+  }
 }
