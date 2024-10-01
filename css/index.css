@@ -134,6 +134,11 @@ a:hover {
   text-align: left;
 }
 
+.footer {
+  padding: 2rem;
+  text-align: center;
+}
+
 .page-content {
   flex: 1;
   padding: 4rem;
