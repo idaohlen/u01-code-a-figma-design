@@ -1,0 +1,65 @@
+:root {
+  /* Color palette */
+  --light:        #ffffff;
+  --dark:         #1a1a1a;
+  --black:        #000000;
+  --grey-light-3: #EBEAED;
+  --grey-light-2: #CCCCCC;
+  --grey-light:   #A7A7A7;
+  --grey:         #666666;
+  --grey-dark:    #363636;
+  --green-light:  #D7FFE0;
+  --green:        #018C0F;
+  --blue:         #13B0F5;
+  --pink:         #E70FAA;
+  --purple-dark:  #42446E;
+
+  /* Gradients */
+  --gradient: linear-gradient(
+    to right,
+    var(--blue),
+    var(--pink)
+  );
+
+  /* Color variables */
+  --body-bg: var(--light);
+  --body-text: var(--grey);
+  --link-text: var(--black);
+  --link-text-hover: var(--grey);
+  --heading-text: var(--purple-dark);
+  --heading-3-text: var(--body-color);
+  --header-text: var(--black);
+  --pill-text: var(--green);
+  --pill-bg: var(--green-light);
+  --job-list-item-border: var(--grey-light-3);
+  --job-list-detail-text: var(--grey-light);
+  --card-shadow: var(--grey-light-2);
+  --card-title-text: var(--black);
+  --card-note-text: var(--purple-dark);
+  --email-link-hover: var(--blue);
+}
+
+/* Resets etc. */
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+}
