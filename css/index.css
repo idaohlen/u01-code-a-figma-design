@@ -5,7 +5,7 @@
 body {
   background: var(--body-bg);
   font-family: "Poppins", sans-serif;
-  color: var(--body-color);
+  color: var(--body-text);
   display: flex;
   flex-direction: column;
 }
@@ -16,7 +16,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   padding: 2.2rem 0;
-  color: var(--heading-color);
+  color: var(--heading-text);
   line-height: 1;
 }
 
@@ -29,11 +29,11 @@ h2 {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--link-text);
 }
 
 a:hover {
-  color: var(--link-color-hover);
+  color: var(--link-text-hover);
   text-decoration: none;
 }
 
@@ -44,7 +44,7 @@ a:hover {
 .header {
   padding: 1rem;
   text-align: center;
-  color: var(--header-color);
+  color: var(--header-text);
 }
 
 .header__nav {
@@ -182,7 +182,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
   flex: 100%;
   padding: 0;
   font-weight: 500;
-  color: var(--heading-3-color);
+  color: var(--heading-3-text);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -192,11 +192,67 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 .jobs-list__detail {
   font-size: 1.3rem;
-  color: var(--jobs-list-detail-color);
+  color: var(--jobs-list-detail-text);
 }
 
 .jobs-list__detail:last-child {
   margin-left: auto;
+}
+
+/* Card */
+
+.cards-container {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem 3rem;
+}
+
+.card {
+  flex: 1;
+  border-radius: 15px;
+  min-width: 300px;
+  overflow: hidden;
+  box-shadow:
+    0px 0px 100px var(--card-shadow),
+    0px 0px 10px var(--card-shadow);
+}
+
+.card__thumbnail {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__content {
+  padding: 2.5rem;
+  font-size: 1.3rem;
+}
+
+.card__title {
+  padding: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--card-title-text);
+}
+
+.card__note {
+  font-size: .9em;
+  color: var(--card-note-text);
+}
+
+.card__note strong {
+  font-weight: 500;
+}
+
+.card__footer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+
 }
 
 /* Pill */
@@ -223,6 +279,6 @@ https://css-tricks.com/gradient-borders-in-css/ */
 /* Desktop: Wider than 600px */
 @media screen and (min-width: 600px) {
   h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-color-desktop);
+    color: var(--heading-text-desktop);
   }
 }

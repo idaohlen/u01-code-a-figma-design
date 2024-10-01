@@ -23,17 +23,20 @@
 
   /* Color variables */
   --body-bg: var(--light);
-  --body-color: var(--grey);
-  --link-color: var(--black);
-  --link-color-hover: var(--grey);
-  --heading-color: var(--black);
-  --heading-color-desktop: var(--purple-dark);
-  --heading-3-color: var(--body-color);
-  --header-color: var(--black);
+  --body-text: var(--grey);
+  --link-text: var(--black);
+  --link-text-hover: var(--grey);
+  --heading-text: var(--black);
+  --heading-text-desktop: var(--purple-dark);
+  --heading-3-text: var(--body-color);
+  --header-text: var(--black);
   --pill-text: var(--green);
   --pill-bg: var(--green-light);
   --jobs-list-item-border: var(--grey-light-3);
-  --jobs-list-detail-color: var(--grey-light);
+  --jobs-list-detail-text: var(--grey-light);
+  --card-shadow: var(--grey-light-2);
+  --card-title-text: var(--black);
+  --card-note-text: var(--purple-dark);
 }
 
 /* Resets etc. */
