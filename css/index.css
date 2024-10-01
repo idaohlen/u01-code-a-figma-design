@@ -44,7 +44,6 @@ a:hover {
 .header {
   padding: 1rem;
   text-align: center;
-  color: var(--header-text);
 }
 
 .header__nav {
@@ -74,6 +73,7 @@ a:hover {
 }
 
 .header__nav a {
+  color: var(--header-nav-link);
   font-weight: 600;
   text-decoration: none;
 }
@@ -109,6 +109,7 @@ a:hover {
 
 .page-content {
   flex: 1;
+  width: 100%;
   padding: 4rem;
 }
 
@@ -166,8 +167,6 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 .profile-img {
   --border-width: 5px;
-  display: flex;
-  align-items: center;
   position: relative;
   max-width: 200px;
   border-radius: 50%;
@@ -183,6 +182,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   z-index: -1;
+  aspect-ratio: 1 / 1;
   margin: calc(var(--border-width) * -1);
   border-radius: inherit;
   background: var(--gradient);
@@ -221,7 +221,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
   color: var(--job-list-detail-text);
 }
 
-.job-list__detail:last-child {
+.job-list__date:last-child {
   margin-left: auto;
 }
 
@@ -254,6 +254,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
   border-radius: 15px;
   min-width: 300px;
   overflow: hidden;
+  background: var(--card-bg);
   box-shadow:
     0px 0px 100px var(--card-shadow),
     0px 0px 10px var(--card-shadow);
@@ -319,6 +320,58 @@ https://css-tricks.com/gradient-borders-in-css/ */
 }
 /* Media queries --------------------------- */
 
-/* Desktop: Wider than 600px */
-@media screen and (min-width: 600px) {
+/* Desktop: Wider than 810px */
+@media screen and (min-width: 810px) {
+  :root {
+    --page-max-width: 1000px;
+    --header-nav-link: light-dark(var(--grey), var(--grey-light));
+  }
+
+  .page-content, .header__nav {
+    max-width: var(--page-max-width);
+    margin: 0 auto;
+  }
+
+  .header__nav {
+    padding: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .header__logo {
+    font-size: 2rem;
+    margin-right: auto;
+  }
+
+  .toggle-menu {
+    display: none;
+  }
+
+  .page-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile-img {
+    max-width: 250px;
+  }
+
+  .job-list__item {
+    gap: 1rem 3rem;
+  }
+
+  .job-list__detail-container {
+    display: contents;
+  }
+
+  .icon-list {
+    margin: 6rem 0;
+  }
+
+  .card {
+    min-width: 220px;
+  }
 }

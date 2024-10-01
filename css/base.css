@@ -22,21 +22,22 @@
   );
 
   /* Color variables */
-  --body-bg: var(--light);
-  --body-text: var(--grey);
-  --link-text: var(--black);
-  --link-text-hover: var(--grey);
-  --heading-text: var(--purple-dark);
-  --heading-3-text: var(--body-color);
-  --header-text: var(--black);
-  --pill-text: var(--green);
-  --pill-bg: var(--green-light);
-  --job-list-item-border: var(--grey-light-3);
+  --body-bg:              light-dark(var(--light), var(--dark));
+  --body-text:            light-dark(var(--grey), var(--grey-light));
+  --link-text:            light-dark(var(--black), var(--light));
+  --link-text-hover:      light-dark(var(--grey), var(--grey-light));
+  --heading-text:         light-dark(var(--purple-dark), var(--grey-light-2));
+  --heading-3-text:       var(--body-text);
+  --header-nav-link:      light-dark(var(--black), var(--grey-light));
+  --pill-text:            var(--green);
+  --pill-bg:              var(--green-light);
+  --job-list-item-border: light-dark(var(--grey-light-3), var(--grey-dark));
   --job-list-detail-text: var(--grey-light);
-  --card-shadow: var(--grey-light-2);
-  --card-title-text: var(--black);
-  --card-note-text: var(--purple-dark);
-  --email-link-hover: var(--blue);
+  --card-shadow:          light-dark(var(--grey-light-2), var(--dark));
+  --card-bg:              light-dark(var(--light), var(--grey-dark));
+  --card-title-text:      light-dark(var(--black), var(--grey-light-2));
+  --card-note-text:       light-dark(var(--purple-dark), var(--body-text));
+  --email-link-hover:     var(--blue);
 }
 
 /* Resets etc. */
@@ -49,6 +50,7 @@
 
 html {
   font-size: 62.5%;
+  color-scheme: light dark;
 }
 
 html, body {
