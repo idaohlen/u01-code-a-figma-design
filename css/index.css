@@ -57,6 +57,8 @@ img {
 body {
   font-family: "Poppins", sans-serif;
   color: var(--body-text-color);
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -132,6 +134,11 @@ a:hover {
   text-align: left;
 }
 
+.page-content {
+  flex: 1;
+  padding: 4rem;
+}
+
 /* Elements */
 
 .logo {
@@ -155,4 +162,12 @@ a:hover {
 }
 .logo__lower {
   margin-top: -.4em;
+}
+
+/* Utilities */
+
+.gradient-text {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
