@@ -164,21 +164,21 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 /* Jobs list */
 
-.jobs-list {
+.job-list {
   margin: 2rem 0;
   list-style: none;
 }
 
-.jobs-list__item {
+.job-list__item {
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  border-bottom: 2px solid var(--jobs-list-item-border);
+  border-bottom: 2px solid var(--job-list-item-border);
 }
 
-.jobs-list__title {
+.job-list__title {
   flex: 100%;
   padding: 0;
   font-weight: 500;
@@ -190,13 +190,27 @@ https://css-tricks.com/gradient-borders-in-css/ */
   gap: 1rem;
 }
 
-.jobs-list__detail {
+.job-list__detail {
   font-size: 1.3rem;
-  color: var(--jobs-list-detail-text);
+  color: var(--job-list-detail-text);
 }
 
-.jobs-list__detail:last-child {
+.job-list__detail:last-child {
   margin-left: auto;
+}
+
+/* Icon list */
+
+.icon-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.icon-list__icon {
+  display: flex;
+  font-size: 10rem;
 }
 
 /* Card */
@@ -252,7 +266,6 @@ https://css-tricks.com/gradient-borders-in-css/ */
   display: flex;
   justify-content: space-between;
   font-size: 1.3rem;
-
 }
 
 /* Pill */

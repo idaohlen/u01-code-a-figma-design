@@ -32,8 +32,8 @@
   --header-text: var(--black);
   --pill-text: var(--green);
   --pill-bg: var(--green-light);
-  --jobs-list-item-border: var(--grey-light-3);
-  --jobs-list-detail-text: var(--grey-light);
+  --job-list-item-border: var(--grey-light-3);
+  --job-list-detail-text: var(--grey-light);
   --card-shadow: var(--grey-light-2);
   --card-title-text: var(--black);
   --card-note-text: var(--purple-dark);
