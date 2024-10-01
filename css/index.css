@@ -107,6 +107,23 @@ a:hover {
   padding: 4rem;
 }
 
+.page-contact {
+  text-align: center;
+}
+
+.page-contact__title {
+  padding-bottom: 1rem;
+}
+
+.page-contact__email-link {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.page-contact__email-link:hover {
+  text-decoration: 2px underline var(--email-link-hover);
+}
+
 /* Elements --------------------------- */
 
 /* Logo */
@@ -279,6 +296,13 @@ https://css-tricks.com/gradient-borders-in-css/ */
   border-radius: 100px;
 }
 
+/* Misc */
+
+.email-text {
+  padding: 1rem;
+  font-size: 4rem;
+}
+
 /* Utilities ------------------------------- */
 
 .gradient-text {
@@ -286,7 +310,6 @@ https://css-tricks.com/gradient-borders-in-css/ */
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 /* Media queries --------------------------- */
 
 /* Desktop: Wider than 600px */
