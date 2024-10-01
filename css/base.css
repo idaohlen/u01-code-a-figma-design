@@ -1,0 +1,62 @@
+:root {
+  /* Color palette */
+  --light:        #ffffff;
+  --dark:         #1a1a1a;
+  --black:        #000000;
+  --grey-light-3: #EBEAED;
+  --grey-light-2: #CCCCCC;
+  --grey-light:   #A7A7A7;
+  --grey:         #666666;
+  --grey-dark:    #363636;
+  --green-light:  #D7FFE0;
+  --green:        #018C0F;
+  --blue:         #13B0F5;
+  --pink:         #E70FAA;
+  --purple-dark:  #42446E;
+
+  /* Gradients */
+  --gradient: linear-gradient(
+    to right,
+    var(--blue),
+    var(--pink)
+  );
+
+  /* Color variables */
+  --body-bg: var(--light);
+  --body-color: var(--grey);
+  --link-color: var(--black);
+  --link-color-hover: var(--grey);
+  --heading-color: var(--black);
+  --heading-color-desktop: var(--purple-dark);
+  --heading-3-color: var(--body-color);
+  --header-color: var(--black);
+  --pill-text: var(--green);
+  --pill-bg: var(--green-light);
+  --jobs-list-item-border: var(--grey-light-3);
+  --jobs-list-detail-color: var(--grey-light);
+}
+
+/* Resets etc. */
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+}

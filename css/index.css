@@ -1,67 +1,9 @@
-:root {
-  /* Color palette */
-  --light:        #ffffff;
-  --dark:         #1a1a1a;
-  --black:        #000000;
-  --grey-light-3: #EBEAED;
-  --grey-light-2: #CCCCCC;
-  --grey-light:   #A7A7A7;
-  --grey:         #666666;
-  --grey-dark:    #363636;
-  --green-light:  #D7FFE0;
-  --green:        #018C0F;
-  --blue:         #13B0F5;
-  --pink:         #E70FAA;
-  --purple-dark:  #42446E;
+@import "./base.css";
 
-  --gradient: linear-gradient(
-    to right,
-    var(--blue),
-    var(--pink)
-  );
-
-  /* Colors */
-  --body-bg: var(--light);
-  --body-color: var(--grey);
-  --link-color: var(--black);
-  --link-color-hover: var(--grey);
-  --heading-color: var(--black);
-  --heading-color-desktop: var(--purple-dark);
-  --heading-3-color: var(--body-color);
-  --header-color: var(--black);
-  --pill-text: var(--green);
-  --pill-bg: var(--green-light);
-  --jobs-list-item-border: var(--grey-light-3);
-  --jobs-list-detail-color: var(--grey-light);
-}
-
-/* Base */
-*, *::before, *::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-html, body {
-  height: 100%;
-}
+/* Typography --------------------------- */
 
 body {
-  box-sizing: border-box;
   background: var(--body-bg);
-  font-size: 1.6rem;
-}
-
-img {
-  width: 100%;
-}
-
-/* Typography */
-body {
   font-family: "Poppins", sans-serif;
   color: var(--body-color);
   display: flex;
@@ -95,7 +37,9 @@ a:hover {
   text-decoration: none;
 }
 
-/* Layout */
+/* Layout --------------------------- */
+
+/* Header */
 
 .header {
   padding: 1rem;
@@ -149,17 +93,23 @@ a:hover {
   text-align: left;
 }
 
+/* Footer */
+
 .footer {
   padding: 2rem;
   text-align: center;
 }
+
+/* Main / Page content */
 
 .page-content {
   flex: 1;
   padding: 4rem;
 }
 
-/* Elements */
+/* Elements --------------------------- */
+
+/* Logo */
 
 .logo {
   width: fit-content;
@@ -184,6 +134,7 @@ a:hover {
   margin-top: -.4em;
 }
 
+/* Profile image */
 /* Gradient border with border-radius solution from:
 https://css-tricks.com/gradient-borders-in-css/ */
 
@@ -210,6 +161,8 @@ https://css-tricks.com/gradient-borders-in-css/ */
   border-radius: inherit;
   background: var(--gradient);
 }
+
+/* Jobs list */
 
 .jobs-list {
   margin: 2rem 0;
@@ -246,6 +199,8 @@ https://css-tricks.com/gradient-borders-in-css/ */
   margin-left: auto;
 }
 
+/* Pill */
+
 .pill {
   padding: .5rem 1rem;
   background: var(--pill-bg);
@@ -255,7 +210,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
   border-radius: 100px;
 }
 
-/* Utilities */
+/* Utilities ------------------------------- */
 
 .gradient-text {
   background: var(--gradient);
@@ -263,8 +218,9 @@ https://css-tricks.com/gradient-borders-in-css/ */
   -webkit-text-fill-color: transparent;
 }
 
-/* Media queries */
+/* Media queries --------------------------- */
 
+/* Desktop: Wider than 600px */
 @media screen and (min-width: 600px) {
   h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color-desktop);
