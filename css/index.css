@@ -78,6 +78,11 @@ a:hover {
   text-decoration: none;
 }
 
+.header__nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .header__nav .toggle-menu {
   position: absolute;
   right: 0;
@@ -105,6 +110,10 @@ a:hover {
 .page-content {
   flex: 1;
   padding: 4rem;
+}
+
+.page-home__title {
+  line-height: 1.2;
 }
 
 .page-contact {
@@ -279,10 +288,15 @@ https://css-tricks.com/gradient-borders-in-css/ */
 }
 
 .card__footer {
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   font-size: 1.3rem;
+}
+
+.card__footer .icon {
+  vertical-align: middle;
+  font-size: 1.3em;
 }
 
 /* Pill */
@@ -294,13 +308,6 @@ https://css-tricks.com/gradient-borders-in-css/ */
   font-size: .6em;
   text-align: center;
   border-radius: 100px;
-}
-
-/* Misc */
-
-.email-text {
-  padding: 1rem;
-  font-size: 4rem;
 }
 
 /* Utilities ------------------------------- */
