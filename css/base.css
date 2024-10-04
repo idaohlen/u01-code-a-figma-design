@@ -51,6 +51,7 @@
   --list-detail-text:                 var(--grey-light);
 
   --card-shadow:           light-dark(var(--grey-light-2), var(--dark));
+  --card-shadow-hover:     light-dark(var(--grey), var(--dark));
   --card-bg:               light-dark(var(--light),        var(--grey-dark));
   --card-title-text:       light-dark(var(--black),        var(--grey-light-2));
   --card-note-text:        light-dark(var(--purple-dark),  var(--body-text));
