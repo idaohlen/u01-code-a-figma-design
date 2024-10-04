@@ -226,18 +226,20 @@ https://css-tricks.com/gradient-borders-in-css/ */
   margin-left: auto;
 }
 
-/* Icon list */
+/* Icon grid */
 
-.icon-list {
+.icon-grid {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
 }
 
-.icon-list__icon {
+.icon-grid__icon {
   display: flex;
-  font-size: 10rem;
+  justify-content: center;
+  font-size: clamp(4rem, 14vw, 10rem);
 }
 
 /* Card */
@@ -330,7 +332,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 /* Desktop: Wider than 810px */
 
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 830px) {
   :root {
     --page-max-width: 1000px;
     --header-nav-link: light-dark(var(--grey), var(--grey-light));
@@ -377,8 +379,8 @@ https://css-tricks.com/gradient-borders-in-css/ */
     display: contents;
   }
 
-  .icon-list {
-    margin: 6rem 0;
+  .icon-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   .card {
