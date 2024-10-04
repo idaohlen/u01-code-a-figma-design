@@ -21,3 +21,4 @@ Bildkällor:
 
 - https://cssgradient.io/blog/css-gradient-text/
 - https://css-tricks.com/gradient-borders-in-css/
+- https://alexandersandberg.com/articles/creating-a-website-theme-switcher-with-css-only/

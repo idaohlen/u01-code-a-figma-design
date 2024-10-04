@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/icons.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
@@ -36,11 +35,14 @@
           <li><a href="./pages/projects.html">Projects</a></li>
           <li><a href="./pages/contact.html">Contact</a></li>
         </ul>
-        <ul class="header__nav-socials">
-          <li><a href="#"><i class="icon icon-github"></i></a></li>
-          <li><a href="#"><i class="icon icon-twitter_circle"></i></a></li>
-          <li><a href="#"><i class="icon icon-linkedin_circle"></i></a></li>
-        </ul>
+        <div class="header__container">
+          <ul class="header__nav-socials">
+            <li><a href="#"><i class="icon icon-github"></i></a></li>
+            <li><a href="#"><i class="icon icon-twitter_circle"></i></a></li>
+            <li><a href="#"><i class="icon icon-linkedin_circle"></i></a></li>
+          </ul>
+          <label for="theme-toggle" class="theme-toggle__label" title="Toggle dark mode"></label>
+        </div>
       </nav>
     </header>
 
@@ -61,7 +63,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p>Designed and built by <strong>Maya</strong> with <span class="text-gradient">Love</span> & <span class="text-gradient">Coffee</span></p>
+      <p>Designed and built by <span class="text-gradient--blue-purple"><b>Maya</b></span> with <span class="text-gradient">Love</span> & <span class="text-gradient">Coffee</span></p>
     </footer>
   </div>
 </body>

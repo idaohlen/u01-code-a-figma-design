@@ -31,6 +31,11 @@
     var(--blue),
     var(--purple)
   );
+  --gradient-purple-pink: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink)
+  );
 
   /* Color variables: Light mode */
   --body-bg:               var(--light);
@@ -55,6 +60,38 @@
   --card-bg:               var(--light);
   --card-title-text:       var(--black);
   --card-note-text:        var(--purple-dark);
+
+  --toggle-bg:             var(--black);
+  --toggle-border:         var(--black);
+  --toggle-button:         var(--light);
+  --toggle-button-border:  var(--black);
+}
+
+/* Dark mode colors */
+#theme-toggle:checked ~ .wrapper {
+  --body-bg:               var(--dark);
+  --body-text:             var(--grey-light);
+  --link-text:             var(--grey-light-2);
+  --link-text-hover:       var(--light);
+
+  --heading-text:          var(--grey-light-2);
+  --heading-3-text:        var(--grey-light-2);
+  --header-nav-link:       var(--grey-light);
+  --header-nav-link-hover: var(--light);
+
+  --list-item-border:      var(--grey-dark);
+  --list-detail-text:      var(--grey-light);
+
+  --card-shadow:           var(--dark);
+  --card-shadow-hover:     var(--dark);
+  --card-bg:               var(--grey-dark);
+  --card-title-text:       var(--grey-light-2);
+  --card-note-text:        var(--body-text);
+
+  --toggle-bg:             var(--dark);
+  --toggle-border:         var(--grey-light);
+  --toggle-button:         var(--grey-light);
+  --toggle-button-border:  var(--dark);
 }
 
 /* Resets etc. */
@@ -80,25 +117,4 @@ body {
 
 img {
   width: 100%;
-}
-
-/* Dark mode colors */
-
-#theme-toggle:checked ~ .wrapper {
-  --body-bg:               var(--dark);
-  --body-text:             var(--light);
-  --link-text-hover:       var(--grey-light);
-
-  --heading-text:          var(--grey-light-2);
-  --header-nav-link:       var(--grey-light);
-  --header-nav-link-hover: var(--light);
-
-  --list-item-border:      var(--grey-dark);
-  --list-detail-text:      var(--grey-light);
-
-  --card-shadow:           var(--dark);
-  --card-shadow-hover:     var(--dark);
-  --card-bg:               var(--grey-dark);
-  --card-title-text:       var(--grey-light-2);
-  --card-note-text:        var(--body-text);
 }
