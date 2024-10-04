@@ -84,7 +84,7 @@ img {
 
 /* Dark mode colors */
 
-.theme-toggle:checked ~ .wrapper {
+#theme-toggle:checked ~ .wrapper {
   --body-bg:               var(--dark);
   --body-text:             var(--light);
   --link-text-hover:       var(--grey-light);
