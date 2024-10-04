@@ -12,32 +12,48 @@
   --green:        #018C0F;
   --blue:         #13B0F5;
   --pink:         #E70FAA;
+  --purple:       #7566d2;
   --purple-dark:  #42446E;
 
   /* Gradients */
-  --gradient: linear-gradient(
+  --gradient-blue-pink: linear-gradient(
     to right,
     var(--blue),
     var(--pink)
   );
+  --gradient-blue-pink-yt: linear-gradient(
+    to top,
+    var(--blue),
+    var(--pink)
+  );
+  --gradient-blue-purple: linear-gradient(
+    to right,
+    var(--blue),
+    var(--purple)
+  );
 
   /* Color variables */
-  --body-bg:              light-dark(var(--light), var(--dark));
-  --body-text:            light-dark(var(--grey), var(--grey-light));
-  --link-text:            light-dark(var(--black), var(--light));
-  --link-text-hover:      light-dark(var(--grey), var(--grey-light));
-  --heading-text:         light-dark(var(--purple-dark), var(--grey-light-2));
-  --heading-3-text:       var(--body-text);
-  --header-nav-link:      light-dark(var(--black), var(--grey-light));
-  --pill-text:            var(--green);
-  --pill-bg:              var(--green-light);
-  --job-list-item-border: light-dark(var(--grey-light-3), var(--grey-dark));
-  --job-list-detail-text: var(--grey-light);
-  --card-shadow:          light-dark(var(--grey-light-2), var(--dark));
-  --card-bg:              light-dark(var(--light), var(--grey-dark));
-  --card-title-text:      light-dark(var(--black), var(--grey-light-2));
-  --card-note-text:       light-dark(var(--purple-dark), var(--body-text));
-  --email-link-hover:     var(--blue);
+  --body-bg:               light-dark(var(--light),       var(--dark));
+  --body-text:             light-dark(var(--grey),        var(--grey-light));
+  --link-text:             light-dark(var(--black),       var(--light));
+  --link-text-hover:       light-dark(var(--grey),        var(--grey-light));
+  --email-link-hover:                 var(--blue);
+
+  --heading-text:          light-dark(var(--purple-dark), var(--grey-light-2));
+  --heading-3-text:                   var(--body-text);
+  --header-nav-link:       light-dark(var(--black),       var(--grey-light));
+  --header-nav-link-hover: light-dark(var(--grey),        var(--light));
+  --logo-gradient:                    var(--gradient-blue-pink);
+
+  --pill-text:                        var(--green);
+  --pill-bg:                          var(--green-light);
+  --list-item-border:      light-dark(var(--grey-light-3), var(--grey-dark));
+  --list-detail-text:                 var(--grey-light);
+
+  --card-shadow:           light-dark(var(--grey-light-2), var(--dark));
+  --card-bg:               light-dark(var(--light),        var(--grey-dark));
+  --card-title-text:       light-dark(var(--black),        var(--grey-light-2));
+  --card-note-text:        light-dark(var(--purple-dark),  var(--body-text));
 }
 
 /* Resets etc. */

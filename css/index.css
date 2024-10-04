@@ -69,6 +69,7 @@ a:hover {
 }
 
 .header__nav-socials .icon-twitter_circle {
+  /* Twitter icon is different size than the others, might do a better fix later */
   font-size: 1.1em;
 }
 
@@ -79,6 +80,7 @@ a:hover {
 }
 
 .header__nav a:hover {
+  color: var(--header-nav-link-hover);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -143,7 +145,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--gradient);
+  background: var(--logo-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -184,26 +186,26 @@ https://css-tricks.com/gradient-borders-in-css/ */
   aspect-ratio: 1 / 1;
   margin: calc(var(--border-width) * -1);
   border-radius: inherit;
-  background: var(--gradient);
+  background: var(--gradient-blue-pink-yt);
 }
 
 /* Jobs list */
 
-.job-list {
+.list {
   margin: 2rem 0;
   list-style: none;
 }
 
-.job-list__item {
+.list__item {
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  border-bottom: 2px solid var(--job-list-item-border);
+  border-bottom: 2px solid var(--list-item-border);
 }
 
-.job-list__title {
+.list__title {
   flex: 100%;
   padding: 0;
   font-weight: 500;
@@ -215,12 +217,12 @@ https://css-tricks.com/gradient-borders-in-css/ */
   gap: 1rem;
 }
 
-.job-list__detail {
+.list__detail {
   font-size: 1.3rem;
-  color: var(--job-list-detail-text);
+  color: var(--list-detail-text);
 }
 
-.job-list__date:last-child {
+.list__date:last-child {
   margin-left: auto;
 }
 
@@ -312,18 +314,27 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 /* Utilities ------------------------------- */
 
-.gradient-text {
-  background: var(--gradient);
+.text-gradient {
+  background: var(--gradient-blue-pink);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.text-gradient--blue-purple {
+  background: var(--gradient-blue-purple);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Media queries --------------------------- */
 
 /* Desktop: Wider than 810px */
+
 @media screen and (min-width: 810px) {
   :root {
     --page-max-width: 1000px;
     --header-nav-link: light-dark(var(--grey), var(--grey-light));
+    --header-nav-link-hover: light-dark(var(--black), var(--light));
   }
 
   .page-content, .header__nav {
@@ -358,11 +369,11 @@ https://css-tricks.com/gradient-borders-in-css/ */
     max-width: 250px;
   }
 
-  .job-list__item {
+  .list__item {
     gap: 1rem 3rem;
   }
 
-  .job-list__detail-container {
+  .list__detail-container {
     display: contents;
   }
 
