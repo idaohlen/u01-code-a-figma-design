@@ -379,8 +379,8 @@ https://css-tricks.com/gradient-borders-in-css/ */
 }
 
 #theme-toggle:checked ~ .wrapper .theme-toggle__label::after {
-  right: 0;
-  left: auto;
+  left: 100%;
+  transform: translateX(-100%);
 }
 
 /* Utilities ------------------------------- */
@@ -401,7 +401,8 @@ https://css-tricks.com/gradient-borders-in-css/ */
 
 a, a:hover,
 .icon-grid__icon,
-.card {
+.card,
+.theme-toggle__label::after {
   transition: all .3s;
 }
 
