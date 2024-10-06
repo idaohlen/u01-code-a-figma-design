@@ -191,26 +191,14 @@ a:hover {
 https://css-tricks.com/gradient-borders-in-css/ */
 
 .profile-img {
-  --border-width: .5rem;
-  position: relative;
   max-width: 200px;
+  border: .5rem solid #0000;
   border-radius: 50%;
-  border: solid var(--border-width) transparent;
+  background: var(--gradient-blue-pink-yt) border-box;
 }
 
 .profile-img img {
   border-radius: inherit;
-}
-
-.profile-img::before {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: -1;
-  aspect-ratio: 1 / 1;
-  margin: calc(var(--border-width) * -1);
-  border-radius: inherit;
-  background: var(--gradient-blue-pink-yt);
 }
 
 /* List */
