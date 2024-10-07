@@ -244,13 +244,13 @@ https://css-tricks.com/gradient-borders-in-css/ */
   margin: 4rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 2rem;
 }
 
 .icon-grid__icon {
-  display: flex;
-  justify-content: center;
   font-size: clamp(4rem, 14vw, 10rem);
 }
 
@@ -355,6 +355,11 @@ https://css-tricks.com/gradient-borders-in-css/ */
   cursor: pointer;
 }
 
+.theme-toggle__label:hover {
+  background: var(--toggle-bg-hover);
+  border: 2px solid var(--toggle-border-hover);
+}
+
 .theme-toggle__label::after {
   content: "";
   position: absolute;
@@ -364,6 +369,11 @@ https://css-tricks.com/gradient-borders-in-css/ */
   background-color: var(--toggle-button);
   border: 2px solid var(--toggle-button-border);
   border-radius: 50%;
+}
+
+.theme-toggle__label:hover::after {
+  background-color: var(--toggle-button-hover);
+  border: 2px solid var(--toggle-button-border-hover);
 }
 
 #theme-toggle:checked ~ .wrapper .theme-toggle__label::after {
@@ -390,6 +400,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
 a, a:hover,
 .icon-grid__icon,
 .card,
+.theme-toggle__label,
 .theme-toggle__label::after {
   transition: all .3s;
 }

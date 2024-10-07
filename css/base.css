@@ -52,6 +52,7 @@
 
   --pill-text:             var(--green);
   --pill-bg:               var(--green-light);
+
   --list-item-border:      var(--grey-light-3);
   --list-detail-text:      var(--grey-light);
 
@@ -61,10 +62,14 @@
   --card-title-text:       var(--black);
   --card-note-text:        var(--purple-dark);
 
-  --toggle-bg:             var(--black);
-  --toggle-border:         var(--black);
-  --toggle-button:         var(--light);
-  --toggle-button-border:  var(--black);
+  --toggle-bg:                  var(--black);
+  --toggle-bg-hover:            var(--grey);
+  --toggle-border:              var(--black);
+  --toggle-border-hover:        var(--grey);
+  --toggle-button:              var(--light);
+  --toggle-button-hover:        var(--light);
+  --toggle-button-border:       var(--black);
+  --toggle-button-border-hover: var(--grey);
 }
 
 /* Dark mode colors */
@@ -79,6 +84,9 @@
   --header-nav-link:       var(--grey-light);
   --header-nav-link-hover: var(--light);
 
+  --pill-text:             var(--light);
+  --pill-bg:               var(--grey);
+
   --list-item-border:      var(--grey-dark);
   --list-detail-text:      var(--grey-light);
 
@@ -88,10 +96,14 @@
   --card-title-text:       var(--grey-light-2);
   --card-note-text:        var(--body-text);
 
-  --toggle-bg:             var(--dark);
-  --toggle-border:         var(--grey-light);
-  --toggle-button:         var(--grey-light);
-  --toggle-button-border:  var(--dark);
+  --toggle-bg:                  var(--dark);
+  --toggle-bg-hover:            var(--dark);
+  --toggle-border:              var(--grey-light);
+  --toggle-border-hover:        var(--light);
+  --toggle-button:              var(--grey-light);
+  --toggle-button-hover:        var(--light);
+  --toggle-button-border:       var(--dark);
+  --toggle-button-border-hover: var(--dark);
 }
 
 /* Resets etc. */
