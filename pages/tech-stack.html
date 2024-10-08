@@ -9,64 +9,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/icons.css">
   <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <nav class="header__nav">
-      <!-- Logo -->
-      <div class="header__logo">
-        <div class="logo">
-          <a href="index.html">
-            <div class="logo__upper">{008}</div>
-            <div class="logo__lower">Maya</div>
-          </a>
+  <input type="checkbox" id="theme-toggle">
+  <div class="wrapper">
+    <!-- Header -->
+    <header class="header">
+      <nav class="header__nav">
+        <!-- Logo -->
+        <div class="header__logo">
+          <div class="logo">
+            <a href="index.html">
+              <div class="logo__upper">{008}</div>
+              <div class="logo__lower">Maya</div>
+            </a>
+          </div>
         </div>
-      </div>
-      <!-- Navigation -->
-      <div class="toggle-menu" role="button"><i class="icon icon-menu"></i></div>
-      <ul class="header__nav-pages">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./tech-stack.html">Tech Stack</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <!-- Navigation -->
+        <div class="toggle-menu" role="button"><i class="icon icon-menu"></i></div>
+        <ul class="header__nav-pages">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./tech-stack.html">Tech Stack</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="header__container">
+          <ul class="header__nav-socials">
+            <li><a href="#"><i class="icon icon-github"></i></a></li>
+            <li><a href="#"><i class="icon icon-twitter_circle"></i></a></li>
+            <li><a href="#"><i class="icon icon-linkedin_circle"></i></a></li>
+          </ul>
+          <label for="theme-toggle" class="theme-toggle__label" title="Toggle dark mode"></label>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="page-content page-techstack">
+      <h1>My Tech Stack</h1>
+      <p>Technologies I’ve been working with recently</p>
+
+      <ul class="icon-grid">
+        <li class="icon-grid__icon"><i class="icon icon-html5" title="HTML 5"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-css3" title="CSS 3"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-js" title="JavaScript"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-react" title="React"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-redux" title="Redux"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-bootstrap" title="Bootstrap"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-tailwind" title="Tailwind"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-sass" title="Sass"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-git" title="Git"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-greensock" title="Greensock"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-vscode" title="VS Code"></i></li>
+        <li class="icon-grid__icon"><i class="icon icon-github" title="GitHub"></i></li>
       </ul>
-      <ul class="header__nav-socials">
-        <li><a href="#"><i class="icon icon-github"></i></a></li>
-        <li><a href="#"><i class="icon icon-twitter_circle"></i></a></li>
-        <li><a href="#"><i class="icon icon-linkedin_circle"></i></a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Main -->
-  <main class="page-content page-techstack">
-    <h1>My Tech Stack</h1>
-    <p>Technologies I’ve been working with recently</p>
+    </main>
 
-    <ul class="icon-grid">
-      <li class="icon-grid__icon"><i class="icon icon-html5" title="HTML 5"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-css3" title="CSS 3"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-js" title="JavaScript"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-react" title="React"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-redux" title="Redux"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-bootstrap" title="Bootstrap"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-tailwind" title="Tailwind"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-sass" title="Sass"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-git" title="Git"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-greensock" title="Greensock"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-vscode" title="VS Code"></i></li>
-      <li class="icon-grid__icon"><i class="icon icon-github" title="GitHub"></i></li>
-    </ul>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Designed and built by <strong>Maya</strong> with <span class="text-gradient">Love</span> & <span class="text-gradient">Coffee</span></p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Designed and built by <strong>Maya</strong> with <span class="text-gradient">Love</span> & <span class="text-gradient">Coffee</span></p>
+    </footer>
+  </div>
 </body>
 </html>

@@ -31,30 +31,83 @@
     var(--blue),
     var(--purple)
   );
+  --gradient-purple-pink: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink)
+  );
 
-  /* Color variables */
-  --body-bg:               light-dark(var(--light),       var(--dark));
-  --body-text:             light-dark(var(--grey),        var(--grey-light));
-  --link-text:             light-dark(var(--black),       var(--light));
-  --link-text-hover:       light-dark(var(--grey),        var(--grey-light));
-  --email-link-hover:                 var(--blue);
+  /* Color variables: Light mode */
+  --body-bg:               var(--light);
+  --body-text:             var(--grey);
+  --link-text:             var(--black);
+  --link-text-hover:       var(--grey);
+  --email-link-hover:      var(--blue);
 
-  --heading-text:          light-dark(var(--purple-dark), var(--grey-light-2));
-  --heading-3-text:                   var(--body-text);
-  --header-nav-link:       light-dark(var(--black),       var(--grey-light));
-  --header-nav-link-hover: light-dark(var(--grey),        var(--light));
-  --logo-gradient:                    var(--gradient-blue-pink);
+  --heading-text:          var(--purple-dark);
+  --heading-3-text:        var(--body-text);
+  --header-nav-link:       var(--black);
+  --header-nav-link-hover: var(--grey);
+  --logo-gradient:         var(--gradient-blue-pink);
 
-  --pill-text:                        var(--green);
-  --pill-bg:                          var(--green-light);
-  --list-item-border:      light-dark(var(--grey-light-3), var(--grey-dark));
-  --list-detail-text:                 var(--grey-light);
+  --pill-text:             var(--green);
+  --pill-bg:               var(--green-light);
 
-  --card-shadow:           light-dark(var(--grey-light-2), var(--dark));
-  --card-shadow-hover:     light-dark(var(--grey), var(--dark));
-  --card-bg:               light-dark(var(--light),        var(--grey-dark));
-  --card-title-text:       light-dark(var(--black),        var(--grey-light-2));
-  --card-note-text:        light-dark(var(--purple-dark),  var(--body-text));
+  --list-item-border:      var(--grey-light-3);
+  --list-detail-text:      var(--grey-light);
+
+  --card-shadow:           var(--grey-light-2);
+  --card-shadow-hover:     var(--grey);
+  --card-bg:               var(--light);
+  --card-title-text:       var(--black);
+  --card-note-text:        var(--purple-dark);
+
+  --toggle-bg:                  var(--black);
+  --toggle-bg-hover:            var(--grey);
+  --toggle-border:              var(--black);
+  --toggle-border-hover:        var(--grey);
+  --toggle-button:              var(--light);
+  --toggle-button-hover:        var(--light);
+  --toggle-button-border:       var(--black);
+  --toggle-button-border-hover: var(--grey);
+
+  --focus-outline:              var(--black);
+}
+
+/* Dark mode colors */
+#theme-toggle:checked ~ .wrapper {
+  --body-bg:               var(--dark);
+  --body-text:             var(--grey-light);
+  --link-text:             var(--grey-light-2);
+  --link-text-hover:       var(--light);
+
+  --heading-text:          var(--grey-light-2);
+  --heading-3-text:        var(--grey-light-2);
+  --header-nav-link:       var(--grey-light);
+  --header-nav-link-hover: var(--light);
+
+  --pill-text:             var(--light);
+  --pill-bg:               var(--grey);
+
+  --list-item-border:      var(--grey-dark);
+  --list-detail-text:      var(--grey-light);
+
+  --card-shadow:           var(--dark);
+  --card-shadow-hover:     var(--dark);
+  --card-bg:               var(--grey-dark);
+  --card-title-text:       var(--grey-light-2);
+  --card-note-text:        var(--body-text);
+
+  --toggle-bg:                  var(--dark);
+  --toggle-bg-hover:            var(--dark);
+  --toggle-border:              var(--grey-light);
+  --toggle-border-hover:        var(--light);
+  --toggle-button:              var(--grey-light);
+  --toggle-button-hover:        var(--light);
+  --toggle-button-border:       var(--dark);
+  --toggle-button-border-hover: var(--dark);
+
+  --focus-outline:              var(--light);
 }
 
 /* Resets etc. */
@@ -67,7 +120,6 @@
 
 html {
   font-size: 62.5%;
-  color-scheme: light dark;
 }
 
 html, body {

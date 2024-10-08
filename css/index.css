@@ -1,13 +1,20 @@
+@import "./icons.css";
 @import "./base.css";
 
 /* Typography --------------------------- */
 
 body {
-  background: var(--body-bg);
   font-family: "Poppins", sans-serif;
-  color: var(--body-text);
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  background: var(--body-bg);
+  color: var(--body-text);
+  z-index: 0;
 }
 
 p {
@@ -41,6 +48,7 @@ a:hover {
   text-underline-offset: 0.6rem;
 }
 
+
 /* Layout --------------------------- */
 
 /* Header */
@@ -57,19 +65,25 @@ a:hover {
   gap: 1rem;
 }
 
+.header__container {
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+}
+
 .header__nav-pages {
   display: contents;
   list-style: none;
 }
 
 .header__nav-socials {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 2rem;
+  display: contents;
   list-style: none;
   margin-top: 1rem;
   font-size: 1.6em;
+
 }
 
 .header__nav-socials li:hover .icon {
@@ -144,6 +158,7 @@ a:hover {
   text-decoration: 2px underline var(--email-link-hover);
 }
 
+
 /* Elements --------------------------- */
 
 /* Logo */
@@ -176,29 +191,17 @@ a:hover {
 https://css-tricks.com/gradient-borders-in-css/ */
 
 .profile-img {
-  --border-width: 5px;
-  position: relative;
   max-width: 200px;
+  border: .5rem solid #0000;
   border-radius: 50%;
-  border: solid var(--border-width) transparent;
+  background: var(--gradient-blue-pink-yt) border-box;
 }
 
 .profile-img img {
   border-radius: inherit;
 }
 
-.profile-img::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: -1;
-  aspect-ratio: 1 / 1;
-  margin: calc(var(--border-width) * -1);
-  border-radius: inherit;
-  background: var(--gradient-blue-pink-yt);
-}
-
-/* Jobs list */
+/* List */
 
 .list {
   margin: 2rem 0;
@@ -241,13 +244,13 @@ https://css-tricks.com/gradient-borders-in-css/ */
   margin: 4rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   gap: 2rem;
 }
 
 .icon-grid__icon {
-  display: flex;
-  justify-content: center;
   font-size: clamp(4rem, 14vw, 10rem);
 }
 
@@ -332,6 +335,59 @@ https://css-tricks.com/gradient-borders-in-css/ */
   border-radius: 100px;
 }
 
+/* Dark mode toggle */
+
+#theme-toggle {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Accessability fix:
+Display a border around the "visible" toggle when the real "hidden" toggle is focused */
+#theme-toggle:focus-visible ~ .wrapper .theme-toggle__label {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 1rem;
+}
+
+.theme-toggle__label {
+  position: relative;
+  height: 3rem;
+  width: 6rem;
+  background: var(--toggle-bg);
+  border: 2px solid var(--toggle-border);
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.theme-toggle__label:hover {
+  background: var(--toggle-bg-hover);
+  border: 2px solid var(--toggle-border-hover);
+}
+
+.theme-toggle__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--toggle-button);
+  border: 2px solid var(--toggle-button-border);
+  border-radius: 50%;
+}
+
+.theme-toggle__label:hover::after {
+  background-color: var(--toggle-button-hover);
+  border: 2px solid var(--toggle-button-border-hover);
+}
+
+#theme-toggle:checked ~ .wrapper .theme-toggle__label::after {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
 /* Utilities ------------------------------- */
 
 .text-gradient {
@@ -349,21 +405,40 @@ https://css-tricks.com/gradient-borders-in-css/ */
 /* Transitions & Animations */
 
 a, a:hover,
-.header__nav-socials .icon,
 .icon-grid__icon,
-.card {
+.card,
+.theme-toggle__label,
+.theme-toggle__label::after {
   transition: all .3s;
+}
+
+.wrapper {
+  transition: background .3s;
+}
+
+.header__nav-socials .icon {
+  transition: transform .2s;
+
 }
 
 /* Media queries --------------------------- */
 
-/* Desktop: Wider than 810px */
+/* Desktop: Wider than 896px */
 
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 896px) {
   :root {
     --page-max-width: 1000px;
-    --header-nav-link: light-dark(var(--grey), var(--grey-light));
-    --header-nav-link-hover: light-dark(var(--black), var(--light));
+    --header-nav-link: var(--grey);
+    --header-nav-link-hover: var(--black);
+
+    --toggle-bg:             var(--grey);
+    --toggle-border:         var(--grey);
+    --toggle-button:         var(--light);
+    --toggle-button-border:  var(--grey);
+
+    --toggle-bg-hover:            var(--black);
+    --toggle-border-hover:        var(--black);
+    --toggle-button-border-hover: var(--black);
   }
 
   .page-content, .header__nav {
@@ -379,6 +454,15 @@ a, a:hover,
     gap: 3rem;
   }
 
+  .header__container {
+    display: contents;
+  }
+
+  .header__nav-socials {
+    display: flex;
+    gap: 1rem;
+  }
+
   .header__logo {
     font-size: 2rem;
     margin-right: auto;
@@ -386,6 +470,10 @@ a, a:hover,
 
   .toggle-menu {
     display: none;
+  }
+
+  .theme-toggle__label {
+    margin: 0;
   }
 
   .page-home {
