@@ -345,6 +345,13 @@ https://css-tricks.com/gradient-borders-in-css/ */
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+/* Accessability fix:
+Display a border around the "visible" toggle when the real "hidden" toggle is focused */
+#theme-toggle:focus ~ .wrapper .theme-toggle__label {
+  outline: 2px solid black;
+  outline-offset: 1rem;
+}
+
 .theme-toggle__label {
   position: relative;
   height: 3rem;
