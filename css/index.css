@@ -435,6 +435,10 @@ a, a:hover,
     --toggle-border:         var(--grey);
     --toggle-button:         var(--light);
     --toggle-button-border:  var(--grey);
+
+    --toggle-bg-hover:            var(--black);
+    --toggle-border-hover:        var(--black);
+    --toggle-button-border-hover: var(--black);
   }
 
   .page-content, .header__nav {
