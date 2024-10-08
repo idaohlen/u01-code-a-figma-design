@@ -70,6 +70,8 @@
   --toggle-button-hover:        var(--light);
   --toggle-button-border:       var(--black);
   --toggle-button-border-hover: var(--grey);
+
+  --focus-outline:              var(--black);
 }
 
 /* Dark mode colors */
@@ -104,6 +106,8 @@
   --toggle-button-hover:        var(--light);
   --toggle-button-border:       var(--dark);
   --toggle-button-border-hover: var(--dark);
+
+  --focus-outline:              var(--light);
 }
 
 /* Resets etc. */

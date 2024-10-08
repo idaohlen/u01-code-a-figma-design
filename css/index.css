@@ -348,7 +348,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
 /* Accessability fix:
 Display a border around the "visible" toggle when the real "hidden" toggle is focused */
 #theme-toggle:focus-visible ~ .wrapper .theme-toggle__label {
-  outline: 2px solid black;
+  outline: 2px solid var(--focus-outline);
   outline-offset: 1rem;
 }
 
