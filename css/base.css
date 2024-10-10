@@ -1,4 +1,6 @@
 :root {
+  --page-max-width: 1000px;
+
   /* Color palette */
   --light:        #ffffff;
   --dark:         #1a1a1a;

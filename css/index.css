@@ -7,18 +7,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.wrapper {
-  position: relative;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: var(--body-bg);
-  color: var(--body-text);
-  z-index: 0;
-}
-
-p {
-  padding-bottom: 2rem;
+p:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,18 +17,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-h1 {
-  font-size: 3.6rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
+h1 { font-size: 3.6rem; }
+h2 { font-size: 3rem; }
 
 a {
   color: var(--link-text);
   text-underline-offset: 0.3rem;
-
 }
 
 a:hover {
@@ -50,6 +34,16 @@ a:hover {
 
 
 /* Layout --------------------------- */
+
+.wrapper {
+  position: relative;
+  z-index: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--body-bg);
+  color: var(--body-text);
+}
 
 /* Header */
 
@@ -65,7 +59,7 @@ a:hover {
   gap: 1rem;
 }
 
-.header__container {
+.header__socials-container {
   padding: 1.6rem;
   display: flex;
   justify-content: center;
@@ -78,7 +72,7 @@ a:hover {
   list-style: none;
 }
 
-.header__nav-socials {
+.header__socials {
   display: contents;
   list-style: none;
   margin-top: 1rem;
@@ -86,11 +80,11 @@ a:hover {
 
 }
 
-.header__nav-socials li:hover .icon {
+.header__socials li:hover .icon {
   transform: scale(1.4);
 }
 
-.header__nav-socials .icon-twitter_circle {
+.header__socials .icon-twitter_circle {
   /* Twitter icon is different size than the others, might do a better fix later */
   font-size: 1.1em;
 }
@@ -187,8 +181,6 @@ a:hover {
 }
 
 /* Profile image */
-/* Gradient border with border-radius solution from:
-https://css-tricks.com/gradient-borders-in-css/ */
 
 .profile-img {
   max-width: 200px;
@@ -220,13 +212,13 @@ https://css-tricks.com/gradient-borders-in-css/ */
 .list__title {
   flex: 100%;
   padding: 0;
-  font-weight: 500;
-  color: var(--heading-3-text);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  font-weight: 500;
+  color: var(--heading-3-text);
 }
 
 .list__detail {
@@ -246,8 +238,8 @@ https://css-tricks.com/gradient-borders-in-css/ */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  list-style: none;
   gap: 2rem;
+  list-style: none;
 }
 
 .icon-grid__icon {
@@ -346,7 +338,7 @@ https://css-tricks.com/gradient-borders-in-css/ */
 }
 
 /* Accessability fix:
-Display a border around the "visible" toggle when the real "hidden" toggle is focused */
+Display a border around the "visible" toggle (label) when the real "hidden" toggle is focused */
 #theme-toggle:focus-visible ~ .wrapper .theme-toggle__label {
   outline: 2px solid var(--focus-outline);
   outline-offset: 1rem;
@@ -412,14 +404,9 @@ a, a:hover,
   transition: all .3s;
 }
 
-.wrapper {
-  transition: background .3s;
-}
+.wrapper { transition: background .3s; }
 
-.header__nav-socials .icon {
-  transition: transform .2s;
-
-}
+.header__socials .icon { transition: transform .2s; }
 
 /* Media queries --------------------------- */
 
@@ -427,14 +414,13 @@ a, a:hover,
 
 @media screen and (min-width: 896px) {
   :root {
-    --page-max-width: 1000px;
-    --header-nav-link: var(--grey);
-    --header-nav-link-hover: var(--black);
+    --header-nav-link:            var(--grey);
+    --header-nav-link-hover:      var(--black);
 
-    --toggle-bg:             var(--grey);
-    --toggle-border:         var(--grey);
-    --toggle-button:         var(--light);
-    --toggle-button-border:  var(--grey);
+    --toggle-bg:                  var(--grey);
+    --toggle-border:              var(--grey);
+    --toggle-button:              var(--light);
+    --toggle-button-border:       var(--grey);
 
     --toggle-bg-hover:            var(--black);
     --toggle-border-hover:        var(--black);
@@ -454,11 +440,9 @@ a, a:hover,
     gap: 3rem;
   }
 
-  .header__container {
-    display: contents;
-  }
+  .header__socials-container { display: contents; }
 
-  .header__nav-socials {
+  .header__socials {
     display: flex;
     gap: 1rem;
   }
@@ -468,13 +452,9 @@ a, a:hover,
     margin-right: auto;
   }
 
-  .toggle-menu {
-    display: none;
-  }
+  .toggle-menu { display: none; }
 
-  .theme-toggle__label {
-    margin: 0;
-  }
+  .theme-toggle__label { margin: 0; }
 
   .page-home {
     display: flex;
@@ -482,23 +462,13 @@ a, a:hover,
     align-items: center;
   }
 
-  .profile-img {
-    max-width: 250px;
-  }
+  .profile-img { max-width: 250px; }
 
-  .list__item {
-    gap: 1rem 3rem;
-  }
+  .list__item { gap: 1rem 3rem; }
 
-  .list__detail-container {
-    display: contents;
-  }
+  .list__detail-container { display: contents; }
 
-  .icon-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
+  .icon-grid { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
 
-  .card {
-    min-width: 220px;
-  }
+  .card { min-width: 220px; }
 }
