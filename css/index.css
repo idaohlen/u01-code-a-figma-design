@@ -64,7 +64,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .header__nav-pages {
@@ -125,14 +125,23 @@ a:hover {
 
 /* Main / Page content */
 
+.page-container {
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+
 .page-content {
   flex: 1;
-  width: 100%;
   padding: 4rem;
 }
 
 .page-home__title {
   line-height: 1.2;
+}
+
+.page-about .page-content {
+  max-width: 680px;
 }
 
 .page-contact {
@@ -183,14 +192,14 @@ a:hover {
 /* Profile image */
 
 .profile-img {
-  max-width: 200px;
-  border: .5rem solid #0000;
+  max-width: 280px;
+  border: .8rem solid #0000;
   border-radius: 50%;
   background: var(--gradient-blue-pink-yt) border-box;
 }
 
-.profile-img img {
-  border-radius: inherit;
+img.profile-img {
+  image-rendering: pixelated; /* Ensures low-res pixel art doesn't get blurry */
 }
 
 /* List */
@@ -408,6 +417,7 @@ a, a:hover,
 
 .header__socials .icon { transition: transform .2s; }
 
+
 /* Media queries --------------------------- */
 
 /* Desktop: Wider than 896px */
@@ -427,7 +437,7 @@ a, a:hover,
     --toggle-button-border-hover: var(--black);
   }
 
-  .page-content, .header__nav {
+  .page-container, .header__nav {
     max-width: var(--page-max-width);
     margin: 0 auto;
   }
@@ -456,13 +466,13 @@ a, a:hover,
 
   .theme-toggle__label { margin: 0; }
 
-  .page-home {
+  .page-home .page-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .profile-img { max-width: 250px; }
+  .profile-img { max-width: 300px; }
 
   .list__item { gap: 1rem 3rem; }
 
