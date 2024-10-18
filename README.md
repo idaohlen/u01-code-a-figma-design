@@ -1,5 +1,6 @@
 # Individuell uppgift - Portfoliosida utifrån designskiss
 
+[Uppgiften live på Netlify](https://671279b0809f46513425cbfd--cheery-naiad-c3631c.netlify.app/)
 
 ## Sammanfattning av projekt
 
